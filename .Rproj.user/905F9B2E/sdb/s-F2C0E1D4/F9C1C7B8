@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "<?xml version=\"1.0\"?>\n<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n\txmlns:dcterms=\"http://purl.org/dc/terms/\"\n\txmlns:dcat=\"http://www.w3.org/ns/dcat#\"\n\txmlns:foaf=\"http://xmlns.com/foaf/0.1/\">\n  <rdf:Description rdf:about=\"http://Pensionsmyndigheten.org/datasets/dcat#catalog\">\n    <rdf:type rdf:resource=\"http://www.w3.org/ns/dcat#Catalog\"/>\n    <dcterms:title>{{PM_katalog}}</dcterms:title>\n    <dcterms:description>{{Katalogbeskrivning}}</dcterms:description>\n    <dcterms:publisher rdf:nodeID=\"_3\"/>\n    <dcat:dataset rdf:resource=\"http://nobelprize.org/datasets/dcat#lkjb\"/>\n  </rdf:Description>\n  <rdf:Description rdf:nodeID=\"_3\">\n    <rdf:type rdf:resource=\"http://xmlns.com/foaf/0.1/Agent\"/>\n    <foaf:name>{{Organisationsnamn}}</foaf:name>\n  </rdf:Description>\n  <rdf:Description rdf:about=\"http://nobelprize.org/datasets/dcat#lkjb\">\n    <rdf:type rdf:resource=\"http://www.w3.org/ns/dcat#Dataset\"/>\n    <dcterms:title xml:lang=\"en\">{{Datasetnamn}}</dcterms:title>\n    <dcterms:description xml:lang=\"en\">{{Dataset_beskrivning}}</dcterms:description>\n  </rdf:Description>\n</rdf:RDF>\n",
+    "created" : 1478765805164.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1960540177",
+    "id" : "F9C1C7B8",
+    "lastKnownWriteTime" : 1478766188,
+    "last_content_update" : 1478766188940,
+    "path" : "~/Documents/git_repos/open_data/sandbox_min_template.xml",
+    "project_path" : "sandbox_min_template.xml",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "xml"
+}
