@@ -6,7 +6,7 @@
   <rdf:Description rdf:about="http://Pensionsmyndigheten.org/datasets/dcat#catalog">
     <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
     <dcterms:title>Pensionsmyndighetens datakatalog</dcterms:title>
-    <dcterms:description>Katalogen innehåller infomration om det svenska pensionssystemet, tillhandahållna av Pensionsmyndigheten</dcterms:description>
+    <dcterms:description></dcterms:description>
     <dcterms:publisher rdf:nodeID="_3"/>
     <dcat:dataset rdf:resource="http://nobelprize.org/datasets/dcat#lkjb"/>
   </rdf:Description>
@@ -16,7 +16,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://nobelprize.org/datasets/dcat#lkjb">
     <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-    <dcterms:title xml:lang="en">Utbetalningar bostadstillägg dec 2015</dcterms:title>
-    <dcterms:description xml:lang="en">Utbetalade belopp under decembermånad 2015. Geografisk koppling till kommun tillhandahålls i övrigt är data helt avidentifierat</dcterms:description>
+    <dcterms:title xml:lang="en">Utbetalningar BT dec 2015</dcterms:title>
+    <dcterms:description xml:lang="en"></dcterms:description>
   </rdf:Description>
 </rdf:RDF>

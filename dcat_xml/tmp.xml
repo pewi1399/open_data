@@ -5,18 +5,18 @@
 	xmlns:foaf="http://xmlns.com/foaf/0.1/">
   <rdf:Description rdf:about="http://Pensionsmyndigheten.org/datasets/dcat#catalog">
     <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
-    <dcterms:title>{{PM_katalog}}</dcterms:title>
-    <dcterms:description>{{Katalogbeskrivning}}</dcterms:description>
+    <dcterms:title>Pensionsmyndighetens datakatalog</dcterms:title>
+    <dcterms:description></dcterms:description>
     <dcterms:publisher rdf:nodeID="_3"/>
     <dcat:dataset rdf:resource="http://nobelprize.org/datasets/dcat#lkjb"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="_3">
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <foaf:name>{{Organisationsnamn}}</foaf:name>
+    <foaf:name>Pensionsmyndigheten</foaf:name>
   </rdf:Description>
   <rdf:Description rdf:about="http://nobelprize.org/datasets/dcat#lkjb">
     <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-    <dcterms:title xml:lang="en">{{Datasetnamn}}</dcterms:title>
-    <dcterms:description xml:lang="en">{{Datasetbeskrivning}}</dcterms:description>
+    <dcterms:title xml:lang="en">Utbetalningar BT dec 2015</dcterms:title>
+    <dcterms:description xml:lang="en"></dcterms:description>
   </rdf:Description>
 </rdf:RDF>
