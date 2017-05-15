@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:ns1="http://www.w3.org/ns/dcat#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:ns2="http://www.w3.org/2006/vcard/ns#"
+	xmlns:ns3="http://schema.org/"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+	
+<!-- information om katalogen -->
+  <rdf:Description rdf:about="http://pensionsmyndigheten.se/datasets/dcat#catalog">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+    <dcterms:title xml:lang="swe">Pensionsmyndighetens metadatakatalog</dcterms:title>
+    <dcterms:description>Dataset rörande det svenska pensionssystemet tillhandahållna av Pensionsmyndigheten</dcterms:description>
+    <ns1:themeTaxonomy rdf:resource="http://eurovoc.europa.eu/"/>
+	
+
+	<!-- info on catalog -->
+	<dcterms:publisher rdf:resource="http://pensionsmyndigheten.se/datasets/dcat#agent1"/>
+    <dcterms:issued>2017-04-03</dcterms:issued>
+    <dcterms:language rdf:resource="http://id.loc.gov/vocabulary/iso639-1/en"/>
+    <dcterms:modified>2017-05-15</dcterms:modified>
+    <foaf:homepage>https://www.pensionsmyndigheten.se/</foaf:homepage>
+    <!-- <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/> -->
+  </rdf:Description>
+  
+    <!-- Info om myndigheten -->
+  <rdf:Description rdf:nodeID="_n10">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <foaf:name>Pensionsmyndigheten</foaf:name>
+    <dcterms:type rdf:resource="http://purl.org/adms/publishertype/Company"/>
+  </rdf:Description>
+  
+  
+  
+  <!-- container för myndighetsinfo -->
+  <rdf:Description rdf:nodeID="_n12">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+    <ns2:fn>Pensionsmyndigheten</ns2:fn>
+    <ns2:hasTelephone rdf:nodeID="_n13"/>
+    <ns2:hasAddress rdf:nodeID="_n14"/>
+    <ns2:hasEmail rdf:resource="mailto:info@pensionsmyndigheten.org"/>
+  </rdf:Description>
+  
+  <!-- telefonnummer -->
+  <rdf:Description rdf:nodeID="_n13">
+    <ns2:hasValue rdf:resource="tel:111222333"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Voice"/>
+  </rdf:Description>
+  
+  <!-- Myndighetsadress -->
+  <rdf:Description rdf:nodeID="_n14">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <ns2:street-address>Hornsgatan</ns2:street-address>
+    <ns2:postal-code>11111</ns2:postal-code>
+    <ns2:locality>Stockholm</ns2:locality>
+    <ns2:country-name>Sweden</ns2:country-name>
+  </rdf:Description>
+  
+    <!-- Oklart värde? -->
+  <rdf:Description rdf:about="http://sws.geonames.org/2673730">
+    <rdfs:label>Sverige</rdfs:label>
+  </rdf:Description>
+  
+  <!-- Utgivare -->
+  <rdf:Description rdf:about="http://pensionsmyndigheten.se/datasets/dcat#agent1">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <foaf:name>Pensionsmyndigheten</foaf:name>
+    <dcterms:type rdf:resource="http://purl.org/adms/publishertype/Company"/>
+  </rdf:Description>
+  
+	<!-- list datasets one by one -->
+    <ns1:dataset rdf:resource="http://pensionsmyndigheten.se/datasets/dcat#ds1"/>
+	<ns2:dataset rdf:resource="http://pensionsmyndigheten.se/datasets/dcat#ds2"/>
+  
+  <!-- ************************* dataset nr $nr   ***************************** -->
+  
+    <!-- info om dataset -->
+<rdf:Description rdf:about="$dcatnr">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dcterms:title xml:lang="en">$namn</dcterms:title>
+    <dcterms:description> $forklaring </dcterms:description>
+    <ns1:keyword>Pension</ns1:keyword>
+    <ns1:keyword>Försäkring</ns1:keyword>
+    <ns1:keyword>Socialförsäkring</ns1:keyword>
+    <dcterms:publisher rdf:nodeID="_n10"/>
+    <ns1:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <ns1:distribution rdf:resource="$distribution"/>
+    <dcterms:issued>$utgiven</dcterms:issued>
+    <dcterms:modified>$uppdaterad</dcterms:modified>
+    <dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/SWE"/>
+    <ns1:landingPage rdf:resource="$landing"/>
+  <dcterms:conformsTo rdf:resource="$conforms_to"/>
+    <dcterms:temporal rdf:nodeID="$datanr"/>
+    <dcterms:spatial rdf:resource="http://sws.geonames.org/2673730"/>
+    <dcterms:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequencyDAILY"/>
+    <ns1:contactPoint rdf:nodeID="_n12"/>
+  </rdf:Description>
+  
+  <!-- Länk till dataset nr $nr -->
+  <rdf:Description rdf:about="$distribution">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:title xml:lang="en">Länk</dcterms:title>
+    <dcterms:description xml:lang="en">Länk till resurs</dcterms:description>
+    <ns1:accessURL rdf:resource="$fil_lank"/>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/"/>
+    <dcterms:format>$filformat</dcterms:format>
+  </rdf:Description>
+  
+    <!-- Tid kopplad till dataset nr $nr -->
+  <rdf:Description rdf:nodeID="$datanr">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+    <ns3:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">$fromdatum</ns3:startDate>
+    <ns3:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">$tomdatum</ns3:endDate>
+  </rdf:Description>
+ 
+  
+</rdf:RDF>

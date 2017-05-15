@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:ns1="http://www.w3.org/ns/dcat#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:ns2="http://www.w3.org/2006/vcard/ns#"
+	xmlns:ns3="http://schema.org/"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+	
+<!-- information om katalogen -->
+  <rdf:Description rdf:about="http://pensionsmyndigheten.se/datasets/dcat#catalog">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+    <dcterms:title xml:lang="en">Pensionsmyndigheten Dataset catalog</dcterms:title>
+    <dcterms:description>A range of datasets maintained by Pensionsmyndigheten </dcterms:description>
+    <ns1:themeTaxonomy rdf:resource="http://eurovoc.europa.eu/"/>
+	
+	<!-- list datasets one by one -->
+    <ns1:dataset rdf:resource="http://pensionsmyndigheten.se/datasets/dcat#ds1"/>
+    
+	
+	<!-- info on catalog-->
+	<dcterms:publisher rdf:resource="http://pensionsmyndigheten.se/datasets/dcat#agent1"/>
+    <dcterms:issued>2017-04-03</dcterms:issued>
+    <dcterms:language rdf:resource="http://id.loc.gov/vocabulary/iso639-1/en"/>
+    <dcterms:modified>2017-04-05</dcterms:modified>
+    <foaf:homepage>%file_link</foaf:homepage>
+    <!-- <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/> -->
+  </rdf:Description>
+  
+  <!-- info om dataset -->
+  <rdf:Description rdf:about="http://pensionsmyndigheten.se/datasets/dcat#ds1">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dcterms:title xml:lang="en">Pension factors</dcterms:title>
+    <dcterms:description>This dataset contains factors involved in calculating swedish pensions </dcterms:description>
+    <ns1:keyword>Pensions</ns1:keyword>
+    <ns1:keyword>Insurance</ns1:keyword>
+    <ns1:keyword>Social benefits</ns1:keyword>
+    <dcterms:publisher rdf:nodeID="_n10"/>
+    <ns1:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <ns1:distribution rdf:resource="http://pensionsmyndigheten.se/datasets/dcat#dist1"/>
+    <dcterms:issued>2014-01-15</dcterms:issued>
+    <dcterms:modified>2014-08-27</dcterms:modified>
+    <dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+    <ns1:landingPage rdf:resource="%file_link"/>
+    <dcterms:conformsTo rdf:resource="https://www.pensionsmyndigheten.se/forsta-din-pension/om-pensionssystemet/sa-beraknas-din-pension-basbelopp-och-varderegler.html"/>
+    <dcterms:temporal rdf:nodeID="_n11"/>
+    <dcterms:spatial rdf:resource="http://sws.geonames.org/2673730"/>
+    <dcterms:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequencyDAILY"/>
+    <ns1:contactPoint rdf:nodeID="_n12"/>
+  </rdf:Description>
+  
+  
+  <!-- container för myndighetsinfo -->
+  <rdf:Description rdf:nodeID="_n12">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+    <ns2:fn>Pensionsmyndigheten</ns2:fn>
+    <ns2:hasTelephone rdf:nodeID="_n13"/>
+    <ns2:hasAddress rdf:nodeID="_n14"/>
+    <ns2:hasEmail rdf:resource="mailto:info@pensionsmyndigheten.org"/>
+  </rdf:Description>
+  
+  <!-- telefonnummer -->
+  <rdf:Description rdf:nodeID="_n13">
+    <ns2:hasValue rdf:resource="tel:111222333"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Voice"/>
+  </rdf:Description>
+  
+  <!-- myndighetsinfo -->
+  <rdf:Description rdf:nodeID="_n14">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <ns2:street-address>Hornsgatan</ns2:street-address>
+    <ns2:postal-code>11111</ns2:postal-code>
+    <ns2:locality>Stockholm</ns2:locality>
+    <ns2:country-name>Sweden</ns2:country-name>
+  </rdf:Description>
+  
+  <!-- tid kopplad till dataset nr 1 -->
+  <rdf:Description rdf:nodeID="_n11">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+    <ns3:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1905-03-01</ns3:startDate>
+    <ns3:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-01-05</ns3:endDate>
+  </rdf:Description>
+  
+  <!-- Info om myndigheten -->
+  <rdf:Description rdf:nodeID="_n10">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <foaf:name>Pensionsmyndigheten</foaf:name>
+    <dcterms:type rdf:resource="http://purl.org/adms/publishertype/Company"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://pensionsmyndigheten.se/datasets/dcat#dist1">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:title xml:lang="en">Linked Data endpoint</dcterms:title>
+    <dcterms:description xml:lang="en">Provides browsable linked data and a SPARQL endpoint.</dcterms:description>
+    <ns1:accessURL rdf:resource="%file_link"/>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/"/>
+    <dcterms:format>application/sparql-query</dcterms:format>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://sws.geonames.org/2673730">
+    <rdfs:label>Stockholm</rdfs:label>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://pensionsmyndigheten.se/datasets/dcat#agent1">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <foaf:name>Pensionsmyndigheten</foaf:name>
+    <dcterms:type rdf:resource="http://purl.org/adms/publishertype/Company"/>
+  </rdf:Description>
+  
+
+  
+</rdf:RDF>
