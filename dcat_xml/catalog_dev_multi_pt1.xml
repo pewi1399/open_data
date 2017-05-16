@@ -1,0 +1,12 @@
+<!-- ************************* dataset nr $nr   ***************************** -->
+  
+    <!-- info om dataset -->
+<rdf:Description rdf:about="$dcatnr">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dcterms:title xml:lang="en">$namn</dcterms:title>
+    <dcterms:description> $forklaring </dcterms:description>
+    <ns1:keyword>Pension</ns1:keyword>
+    <ns1:keyword>Forsakring</ns1:keyword>
+    <ns1:keyword>Socialforsakring</ns1:keyword>
+    <dcterms:publisher rdf:nodeID="_n10"/>
+    <ns1:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>

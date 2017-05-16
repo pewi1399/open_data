@@ -1,0 +1,16 @@
+  <!-- Länk till dataset nr $nr -->
+  <rdf:Description rdf:about="$distribution">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:title xml:lang="en">$namn_lank</dcterms:title>
+    <dcterms:description xml:lang="en">$forklaring_lank</dcterms:description>
+    <ns1:accessURL rdf:resource="$fil_lank"/>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/"/>
+    <dcterms:format>$filformat</dcterms:format>
+  </rdf:Description>
+  
+    <!-- Tid kopplad till dataset nr $nr -->
+  <rdf:Description rdf:nodeID="$datanr">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+    <ns3:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">$fromdatum</ns3:startDate>
+    <ns3:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">$tomdatum</ns3:endDate>
+  </rdf:Description>

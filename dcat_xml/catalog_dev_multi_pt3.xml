@@ -1,0 +1,10 @@
+    <dcterms:issued>$utgiven</dcterms:issued>
+    <dcterms:modified>$uppdaterad</dcterms:modified>
+    <dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/SWE"/>
+    <ns1:landingPage rdf:resource="$landing"/>
+  <dcterms:conformsTo rdf:resource="$conforms_to"/>
+    <dcterms:temporal rdf:nodeID="$datanr"/>
+    <dcterms:spatial rdf:resource="http://sws.geonames.org/2673730"/>
+    <dcterms:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequencyDAILY"/>
+    <ns1:contactPoint rdf:nodeID="_n12"/>
+  </rdf:Description>

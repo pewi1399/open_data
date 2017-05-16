@@ -11,7 +11,7 @@
   <rdf:Description rdf:about="http://pensionsmyndigheten.se/datasets/dcat#catalog">
     <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
     <dcterms:title xml:lang="swe">Pensionsmyndighetens metadatakatalog</dcterms:title>
-    <dcterms:description>Dataset rörande det svenska pensionssystemet tillhandahållna av Pensionsmyndigheten</dcterms:description>
+    <dcterms:description>Dataset rorande det svenska pensionssystemet tillhandahållna av Pensionsmyndigheten</dcterms:description>
     <ns1:themeTaxonomy rdf:resource="http://eurovoc.europa.eu/"/>
 	
 
