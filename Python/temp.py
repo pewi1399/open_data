@@ -12,7 +12,7 @@ from string import Template
 
 #dataset = pandas.read_csv("H:\Dokument\Git_repos\open_data\metadata.csv", 
 #                          sep = ";")
-dataset = pandas.read_csv("H:\Dokument\Git_repos\open_data\metadata.txt", 
+dataset = pandas.read_csv("H:\Dokument\Git_repos\open_data\metadata\metadata.txt", 
                           sep = "\t")
 
 dataset_singles = dataset.query('periodiserad == "nej"')
@@ -21,10 +21,10 @@ dataset_multiples = dataset.query('periodiserad == "ja"')
 #dataset["Value"]
 
 # read in template parts
-with open('H:\Dokument\Git_repos\open_data\dcat_xml\catalog_dev_pt1.xml', 'r') as myfile:
+with open('H:\Dokument\Git_repos\open_data\templates\catalog_dev_pt1.xml', 'r') as myfile:
     start_template=myfile.read().replace('\n', '');
     
-with open('H:\Dokument\Git_repos\open_data\dcat_xml\catalog_dev_pt2.xml', 'r') as myfile:
+with open('H:\Dokument\Git_repos\open_data\templates\catalog_dev_pt2.xml', 'r') as myfile:
     end_template=myfile.read().replace('\n', '');
 
 
@@ -57,16 +57,16 @@ for i in range(0, len(dataset_singles)):
 
 #------------------------------ multiframes -----------------------------------     
   
-with open('H:\Dokument\Git_repos\open_data\dcat_xml\catalog_dev_multi_pt1.xml', 'r') as myfile:
+with open('H:\Dokument\Git_repos\open_data\templates\catalog_dev_multi_pt1.xml', 'r') as myfile:
     multi_pt1=myfile.read().replace('\n', '');    
 
-with open('H:\Dokument\Git_repos\open_data\dcat_xml\catalog_dev_multi_pt2.xml', 'r') as myfile:
+with open('H:\Dokument\Git_repos\open_data\templates\catalog_dev_multi_pt2.xml', 'r') as myfile:
     multi_pt2=myfile.read().replace('\n', '');    
 
-with open('H:\Dokument\Git_repos\open_data\dcat_xml\catalog_dev_multi_pt3.xml', 'r') as myfile:
+with open('H:\Dokument\Git_repos\open_data\templates\catalog_dev_multi_pt3.xml', 'r') as myfile:
     multi_pt3=myfile.read().replace('\n', '');    
   
-with open('H:\Dokument\Git_repos\open_data\dcat_xml\catalog_dev_multi_pt4.xml', 'r') as myfile:
+with open('H:\Dokument\Git_repos\open_data\templates\catalog_dev_multi_pt4.xml', 'r') as myfile:
     multi_pt4=myfile.read().replace('\n', '');    
   
     
@@ -125,7 +125,7 @@ out = start_template + dataframes + multiframes + "</rdf:RDF>"
 # write catalogue
 #file = open("H:\Dokument\Git_repos\open_data\catalog_out.xml","w") 
 
-with io.open("H:\Dokument\Git_repos\open_data\catalog_out.xml",'w',encoding='utf8') as f:
+with io.open("H:\Dokument\Git_repos\open_data\xml\catalog.xml",'w',encoding='utf8') as f:
     f.write(out)
 
 
