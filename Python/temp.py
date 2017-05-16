@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
-
-This is a temporary script file.
+Script for generating dcat xml from spreadsheet.
 """
 
 # import numpy
@@ -35,6 +33,7 @@ temp = Template(end_template)
 
 dataframes = ""
 
+# loop over all rows in metadata
 for i in range(0, len(dataset)):
     dataframe = temp.substitute(nr = dataset.iloc[i]["nr"],
                                     namn = dataset.iloc[i]["namn"],
@@ -53,11 +52,10 @@ for i in range(0, len(dataset)):
         
     dataframes = dataframes + dataframe
 
-
+# assemble metadata
 out = start_template + dataframes + "</rdf:RDF>"
 
-
-
+# write catalogue
 file = open("H:\Dokument\Git_repos\open_data\catalog_out.xml","w") 
 file.write(out)
 file.close()
